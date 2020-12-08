@@ -1,0 +1,49 @@
+{% extends "!footer.html" %}
+{% block extrafooter %}
+    <style>
+        .footer {
+        max-width     : 800px;
+        width         : 100%;
+        padding-right : 15px;
+        padding-left  : 15px;
+        margin-right  : auto;
+        margin-left   : auto;
+        }
+        .footer a {
+            color         : #808080;
+            text-decoration: none;
+        }
+        .row {
+            display       : -webkit-box;
+            display       : -ms-flexbox;
+            display       : flex;
+            -ms-flex-wrap : wrap;
+            flex-wrap     : wrap;
+            margin-right  : -15px;
+            margin-left   : -15px;
+        }
+        .col-sm {
+            max-height    : 100px;
+            flex-basis    : 0;
+            flex-grow     : 1;
+            text-align    : center;
+        }
+    </style>
+    <div class="footer" style="margin-top: 8px;">
+        <div class="row">
+            <div class="col-sm">
+                <ul>
+                    <li><a href="http://www.tsinghua.edu.cn/">Tsinghua University</a></li>
+                    <li><a href="http://www.ep.tsinghua.edu.cn/">Department of Engineering Physics</a></li>
+                    <li><a href="http://astro.tsinghua.edu.cn/">Department of Astronomy</a></li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <ul>
+                    <li>Address:<Address>Tsinghua University, Beijing, China</Address></li>
+                    <li>Email:grid@tsinghua.edu.cn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
