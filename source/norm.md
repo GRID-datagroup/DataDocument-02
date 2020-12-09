@@ -1,7 +1,7 @@
-# 数据规范
+# Data specification
 
-### 存储
-文件按照[目录结构](./brief.html#id2)存储，全部为fits格式
+### Stored
+All files save as `fits` format (please see [Category](./brief.html#id2))
 
 ### 时间
 1. 存储的数据中的**所有**时间均为`UTC+0`

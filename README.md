@@ -1,18 +1,18 @@
-# 天格计划说明文档
+# GRID Document
 
-## 介绍
-本项目是为了帮助使用天格计划相关产品而编写，正在不断完善中；如果在使用过程中遇到任何问题或者有建议，请联系GRID Team
+## Introduction
+This project is written to help the use of GRID Science Data Products, and is constantly being improved; if you encounter any problems or have suggestions, please contact GRID Team  
 
-## 环境
-本项目使用Sphinx生成，支持markdown文件，使用ReadtheDocs进行托管  
+## Environment
+This project is built with [Sphinx](https://www.sphinx-doc.org/en/master/), supported markdown file and use [ReadtheDocs](https://readthedocs.org) for hosting  
 
-#### 开发环境
+#### Development environment
 ```
 Python 3.9.1rc1
 Sphinx 
 ```
 
-#### 依赖包
+#### Dependent package
 ```
 sphinx
 sphinx-autobuild
@@ -21,7 +21,7 @@ recommonmark
 sphinx-markdown-tables
 ```
 
-#### 配置
+#### Config
 * `conf.py` :
 ```python
 extensions = ['sphinx_markdown_tables', 'recommonmark']
@@ -32,10 +32,10 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 ```
 
-## 目录
-1. 科学数据产品文档
+## Category
+1. Science Data Product Document
 
-## 参考资料
+## Reference
 * [使用ReadtheDocs托管文档](https://www.xncoding.com/2017/01/22/fullstack/readthedoc.html)
 * [ReadthrDocs](https://docs.readthedocs.io/en/stable/index.html)
 * [Sphinx](https://www.sphinx-doc.org/en/master/)

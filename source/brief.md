@@ -1,13 +1,12 @@
-# 简介
+# Introduction
 
-本文档是为了帮助使用天格科学数据产品而编写，正在不断完善中；如果在使用过程中遇到任何问题或者有建议，请联系GRID Team
+This project is written to help the use of GRID Science Data Products, and is constantly being improved; if you encounter any problems or have suggestions, please contact GRID Team  
+In case of content conflict, please refer to the latest version  
 
-如有内容冲突，请以最新版本为准
-
-### 目录结构
+### Category
 ```
-srv/pipeline     根目录  
-├─01             一号星  
+srv/pipeline     root  
+├─01             satellite 1  
 │  ├─fits0       science  
 │  ├─fits1       telemetry  
 │  ├─fits2       sun  
@@ -17,10 +16,10 @@ srv/pipeline     根目录
 │  ├─fits6       earth  
 │  ├─log         log  
 │  └─picture     data picture  
-└─02             二号星
+└─02             satellite 2
 ```  
 
-### 数据流程
+### Data Process
 ##### 01
 <div align="center">  
     <img src="./_static/01.png" width = "600" align=center />

@@ -3,15 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-天格科学数据使用文档
+Science Data Product Document
 =============================================
 
-概览
+Overview
 --------
 
-本文档是为了帮助使用天格科学数据产品而编写，正在不断完善中；如果在使用过程中遇到任何问题或者有建议，请联系GRID Team
+This project is written to help the use of GRID Science Data Products, and is constantly being improved; if you encounter any problems or have suggestions, please contact GRID Team
 
-使用文档
+Category
 -----------------
 
 .. toctree::
@@ -21,14 +21,14 @@
    norm
    detail/index
 
-任务列表
+Task list
 ---------
 * 优化数据格式
 * 中文无法搜索
 * markdown产生Toc tree
 * sun(fits2)的大小问题
 
-更新日志
+Update log
 ---------
 * 0.1.0 编写说明文档
 

@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-数据文件说明
+Data file description
 =============================================
 
-这一部分主要介绍天格科学数据的具体格式;例如Hdu Info，各字段含义等
+This part mainly introduces the specific format of GRID Science Data; for example, HDu Info, meaning of each paragraph, etc.  
 
 .. toctree::
    :maxdepth: 1
