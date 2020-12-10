@@ -1,7 +1,7 @@
 # Tte | fits4
 
-观测期间每轨一个``fits``文件，记录每一个粒子入射事件，分别为``UTC+0``时间、能量、ADC Value值  
-命名规则:``yymmddmmss_yymmddmmss.fits``，分别代表每一轨的起始时间与终止时间
+观测期间每轨一个`fits`文件，记录每一个粒子入射事件，分别为`UTC+0`时间、能量、ADC Value值  
+命名规则:`yymmddmmss_yymmddmmss.fits`，分别代表每一轨的起始时间与终止时间
 
 ### 单元列表
 
@@ -15,7 +15,7 @@
 
 ### 主头文件
 
-|  字段  | 值 |            说明            |
+|  字段  | 值 |            说明             |
 |:------:|:--:|:--------------------------:|
 | SIMPLE | T  | conforms to FITS standard  |
 | BITPIX | 8  | array data type            |

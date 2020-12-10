@@ -1,14 +1,14 @@
 # Sun | fits2
 
-每天一个``fits``文件，每10s记录一个数据点，分别为``UTC+0``时间、姿态四元数、探测器坐标系下的探测器指向和太阳的笛卡尔坐标以及``Ra&Dec``、天球坐标系下的探测器指向和太阳的笛卡尔坐标以及``Ra&Dec``  
-命名规则:``YYYYY_yymmddsun.fits``，前者为距**时间原点**天数，后者为日期
+每天一个`fits`文件，每10s记录一个数据点，分别为`UTC+0`时间、姿态四元数、探测器坐标系下太阳的笛卡尔坐标以及`Ra&Dec`、天球坐标系下的探测器指向和太阳的笛卡尔坐标以及`Ra&Dec`  
+命名规则:`YYYYY_yymmddsun.fits`，前者为距**时间原点**天数，后者为日期
 
 ### 单元列表
 
 | No. |   Name  | Ver |     Type    | Cards |  Dimensions  |                            Format                            |
 |:---:|:-------:|:---:|:-----------:|:-----:|:------------:|:------------------------------------------------------------:|
 |  0  | PRIMARY |  1  |  PrimaryHDU |   4   |      ()      |                                                              |
-|  1  |  RADEC  |  1  | BinTableHDU |   69  | 1964R x 20C  | [D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D] |
+|  1  |  RADEC  |  1  | BinTableHDU |   69  |   NR x 20C   | [D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D] |
 
 ### 主头文件
 
@@ -28,7 +28,7 @@
 | BITPIX   | 8           | array data type            |
 | NAXIS    | 2           | number of array dimensions |
 | NAXIS1   | 160         | length of dimension 1      |
-| NAXIS2   | 1964        | length of dimension 2      |
+| NAXIS2   | N           | length of dimension 2      |
 | PCOUNT   | 0           | number of group parameters |
 | GCOUNT   | 1           | number of groups           |
 | TFIELDS  | 20          | number of table fields     |
@@ -96,14 +96,14 @@
 
 ### 字段说明
 
-|    字段   |       含义      |     备注     |
-|:---------:|:---------------:|:------------:|
-|     t     |    UTC-0时间    |              |
-|     Q0    |        qw       |  姿态四元数  |
-|     Q1    |        qx       |              |
-|     Q2    |        qy       |              |
-|     Q3    |        qz       |              |
-|  g_X_cel  | 探测器指向x坐标 |  天球坐标系  |
+|    字段   |       含义     |     备注      |
+|:---------:|:--------------:|:------------:|
+|     t     |    UTC-0时间   |              |
+|     Q0    |        qw      |  姿态四元数   |
+|     Q1    |        qx      |              |
+|     Q2    |        qy      |              |
+|     Q3    |        qz      |              |
+|  g_X_cel  | 探测器指向x坐标 |  天球坐标系   |
 |  g_Y_cel  | 探测器指向y坐标 |              |
 |  g_Z_cel  | 探测器指向z坐标 |              |
 |  g_Ra_cel |  探测器指向赤经 |              |
@@ -113,7 +113,7 @@
 |  s_Z_cel  |    太阳z坐标    |              |
 |  s_Ra_cel |     太阳赤经    |              |
 | s_Dec_cel |     太阳赤纬    |              |
-|  s_X_det  |    太阳x坐标    | 探测器坐标系 |
+|  s_X_det  |    太阳x坐标    | 探测器坐标系  |
 |  s_Y_det  |    太阳y坐标    |              |
 |  s_Z_det  |    太阳z坐标    |              |
 |  s_Ra_det |     太阳赤经    |              |

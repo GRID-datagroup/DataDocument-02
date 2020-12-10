@@ -24,17 +24,12 @@
 任务列表
 ---------
 * 优化数据格式
-* 中文无法搜索
-* markdown产生Toc tree
+* 中文无法搜索。已解决，参见Github的 `README.md`_
+* markdown产生Toc tree。已解决，markdown无法多文件引用
 * sun(fits2)的大小问题
 
 更新日志
 ---------
 * 0.1.0 编写说明文档
 
-Indices and tables
--------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. _README.md: https://github.com/GRID-datagroup/GRID-document/blob/master/README.md

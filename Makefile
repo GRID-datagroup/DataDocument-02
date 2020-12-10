@@ -4,12 +4,16 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
+SOURCEDIR     = /home/qjlyh/document/doc-zh/source
+BUILDDIR      = /home/qjlyh/document/build
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+html-zh:
+	@$(SPHINXBUILD) -D language=zh -b html $(SOURCEDIR) $(BUILDDIR)/html-zh
+	$(info Chinese Version)
 
 .PHONY: help Makefile
 

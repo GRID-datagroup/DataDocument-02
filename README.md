@@ -32,6 +32,25 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 ```
 
+以下操作将支持本地中文搜索：
+* `jieba package` :
+```python
+pip3 install jieba
+```
+* `zh_CN.py` : 将`zh_CN.py`文件放置在`sphinx/search`目录下
+* `sphinx/search/__init.py__` :
+```python
+from sphinx.search import en, ja, zh_CN
+languages = {
+    'en': en.SearchEnglish,
+    'zh_CN': zh_CN.SearchChinese
+}
+```
+
+#### 本地试运行
+* `Server` : 使用`en/zh_server.py`，采用`Flask`库
+* `Makefile` : 自定义`make html`命令
+
 ## 目录
 1. 科学数据产品文档
 
