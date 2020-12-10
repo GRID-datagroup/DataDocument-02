@@ -1,36 +1,36 @@
 # Data specification
 
 ### Stored
-All files save as `fits` format (please see [Category](./brief.html#id2))
+All files save as `fits` format (Please refer to [Category](./brief.html#category))
 
-### 时间
-1. 存储的数据中的**所有**时间均为`UTC+0`
-2. Mission Elapsed Time(MET)的**时间原点**为`2018.10.29.00:00UTC+0`
+### Time
+1. All timestamps in stored data refer to `UTC-0` time  
+2. The **time origin** of Mission Elapsed Time (MET) is`2018.10.29.00:00UTC+0`
 
-### 坐标系
-轨道数据和日地位置涉及两个参考系：  
-1. det : 探测器坐标系，固定法向为`[0, 0, -1]`
-2. cel : 天球坐标系（近似认为探测器与地心重合）
+### Coordinate System
+The orbit data and position of sun and earth involve two coordinate systems:   
+1. det : Detector , the fixed normal direction is`[0, 0, -1]`
+2. cel : Celestial, approximately considered that the detector coincides with the center of earth
 
-### 文件命名
-##### 无时间信息
-1. fits3：命名为`Observation_plan.fits`
+### File Name
+##### No Time Information
+1. fits3：`Observation_plan.fits`
 
-##### 按照`raw.dat`文件存储
-1. fits0：文件名与`raw.dat`中日期相同（fits0文件内可能混杂来自很多天的数据，而文件名与fits0中数据归属日期无关）
-2. fits1：同fits0
+##### Store as `raw.dat` file
+1. fits0：The file name is date in `raw.dat`, so fits0 file may be mixed with data from several days, and the file name has nothing to do with the date of the data in fits0
+2. fits1：the same as fits0
 
-##### 基于数据中的时间按天(UTC+0)存储
-1. fits2：文件名为`DDDDD_yymmdd`，前者为距**时间原点**天数，后者为日期
-2. fits6：同fits2
+##### Stored by day(UTC+0) based on the time in the data
+1. fits2：The file name is `DDDDD_yymmdd`. The former is the number of days from **time origin**, the latter is date
+2. fits6：the same as fits2
 
-##### 基于数据中的时间按轨(UTC+0)存储
-1. fits5：文件夹为该轨**起始时间**对应的日期，文件以每一轨的起始时间与终止时间命名
-2. fits4：文件夹为该轨**起始时间**对应的日期，文件以每一轨监测数据`orb_mon5.fits`的起始时间与终止时间命名
+##### Stored by orbit start and end time(UTC+0) based on the time in the data
+1. fits5：The folder name is date corresponding to orbit **start time**, the file is named by start time and end time of each orbit
+2. fits4：The folder name is date corresponding to orbit **start time**, the file is named by start time and end time of monitoring data (`orb_mon5.fits`) of each orbit
 
-### 常用数据类型
+### Common Keywords
 
-| 字段        | struct format | FITS format code | minimum format |  
+| Keyword     | struct format | FITS format code | minimum format |  
 | :---------- | :------------ | :--------------- | :------------- |  
 | utc         | L             | J                | int32          |  
 | pps         | Q             | J                | int32          |  

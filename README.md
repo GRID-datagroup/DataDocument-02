@@ -32,6 +32,25 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 ```
 
+The following operations will support local Chinese search:
+* `jieba package` :
+```python
+pip3 install jieba
+```
+* `zh_CN.py` : move the `zh_CN.py` file in the `sphinx/search` directory
+* `sphinx/search/__init.py__` :
+```python
+from sphinx.search import en, ja, zh_CN
+languages = {
+    'en': en.SearchEnglish,
+    'zh_CN': zh_CN.SearchChinese
+}
+```
+
+#### Local test
+* `Server` : use `en/zh_server.py` with `Flask` module
+* `Makefile` : Custom `make html` command
+
 ## Category
 1. Science Data Product Document
 

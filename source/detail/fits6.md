@@ -1,27 +1,27 @@
 # Earth | fits6
 
-每天一个``fits``文件，每10s记录一个数据点，分别为``UTC+0``时间、星下点纬度、星下点经度、探测器高度、天球坐标系下地球的`Ra&Dec`  
-命名规则:``YYYYY_yymmddearth.fits``，前者为距**时间原点**天数，后者为日期
+A `fits` file is generated every day. Each data point is separated by 10s. The recorded values are `UTC+0` timestamp, latitude and longitude  of subsatellite point, altitude of detector, `Ra&Dec` of earth in celestial coordinate system  
+Naming rules : `YYYYY_yymmddearth.fits`. The former is the number of days from **time origin**, the latter is date
 
-### 单元列表
+### HDU LIST
 
 | No. |   Name  | Ver |     Type    | Cards | Dimensions |       Format       |
 |:---:|:-------:|:---:|:-----------:|:-----:|:----------:|:------------------:|
 |  0  | PRIMARY |  1  |  PrimaryHDU |   4   |     ()     |                    |
 |  1  |  RADEC  |  1  | BinTableHDU |   27  | 8640R x 6C | [D, D, D, D, D, D] |
 
-### 主头文件
+### Primary Header
 
-|  字段  | 值 |            说明            |
-|:------:|:--:|:--------------------------:|
-| SIMPLE | T  | conforms to FITS standard  |
-| BITPIX | 8  | array data type            |
-| NAXIS  | 0  | number of array dimensions |
-| EXTEND | T  |                            |
+|Keyword | Value |         Description        |
+|:------:|:-----:|:--------------------------:|
+| SIMPLE |   T   | conforms to FITS standard  |
+| BITPIX |   8   | array data type            |
+| NAXIS  |   0   | number of array dimensions |
+| EXTEND |   T   |                            |
 
-### 扩展单元Ra&Dec头文件
+### Extension Header : Ra&Dec
 
-|   字段   |     值    |            说明            |
+| Keyword  |   Value   |         Description        |
 |:--------:|:---------:|:--------------------------:|
 | XTENSION |  BINTABLE |   binary table extension   |
 |  BITPIX  |     8     |       array data type      |
@@ -51,13 +51,13 @@
 |  TFORM6  |     D     |                            |
 |  TUNIT6  |    deg    |                            |
 
-### 字段说明
+### Keyword Description
 
-|    字段   |      含义      |    说明    |
-|:---------:|:--------------:|:----------:|
-|     t     |    UTC-0时间   |            |
-|  Latitude |   星下点纬度   |            |
-| Longitude |   星下点经度   |            |
-|  Altitude | 探测器高度(km) |            |
-|  e_Ra_cel |    地球赤经    | 天球坐标系 |
-| e_Dec_cel |    地球赤纬    |            |
+|  Keyword  |            Significance           |           Remarks           |
+|:---------:|:---------------------------------:|:---------------------------:|
+|     t     |          UTC-0 timestamp          |                             |
+|  Latitude |              Latitude             |      subsatellite point     |
+| Longitude |             Longitude             |                             |
+|  Altitude |              Altitude             |    Detector or Satellite    |
+|  e_Ra_cel | Right ascension coordinate of sun | Celestial coordinate system |
+| e_Dec_cel |   Declination coordinate of sun   |                             |

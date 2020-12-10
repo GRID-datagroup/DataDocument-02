@@ -1,9 +1,9 @@
 # Observation plan | fits3
 
-### 单元列表
+### HDU LIST
 
-### 主头文件
+### Primary Header
 
-### 扩展单元Ra&Dec头文件
+### Extension Header : Ra&Dec
 
-### 字段说明
+### Keyword Description

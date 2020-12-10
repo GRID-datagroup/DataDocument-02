@@ -5,18 +5,18 @@ In case of content conflict, please refer to the latest version
 
 ### Category
 ```
-srv/pipeline     root  
-├─01             satellite 1  
-│  ├─fits0       science  
-│  ├─fits1       telemetry  
-│  ├─fits2       sun  
-│  ├─fits3       Observation plan  
-│  ├─fits4       tte  
-│  ├─fits5       orbit monitor  
-│  ├─fits6       earth  
-│  ├─log         log  
-│  └─picture     data picture  
-└─02             satellite 2
+/srv/pipeline      root  
+├── 01             satellite 1  
+│  ├── fits0       science  
+│  ├── fits1       telemetry  
+│  ├── fits2       sun  
+│  ├── fits3       Observation plan  
+│  ├── fits4       tte  
+│  ├── fits5       orbit monitor  
+│  ├── fits6       earth  
+│  ├── log         log  
+│  └── picture     data picture  
+└── 02             satellite 2
 ```  
 
 ### Data Process

@@ -1,28 +1,27 @@
 # Sun | fits2
 
-每天一个``fits``文件，每10s记录一个数据点，分别为``UTC+0``时间、姿态四元数、探测器坐标系下的探测器指向和太阳的笛卡尔坐标以及``Ra&Dec``、天球坐标系下的探测器指向和太阳的笛卡尔坐标以及``Ra&Dec``  
-命名规则:``YYYYY_yymmddsun.fits``，前者为距**时间原点**天数，后者为日期
+A `fits` file is generated every day. Each data point is separated by 10s. The recorded values are `UTC+0` timestamp, attitude quaternion, Cartesian coordinates and `Ra&Dec` of sun in detector coordinate system, detector pointing, Cartesian coordinates and `Ra&Dec` of sun in celestial coordinate system  
+Naming rules : `YYYYY_yymmddsun.fits`. The former is the number of days from **time origin**, the latter is date
 
-### 单元列表
+### HDU LIST
 
 | No. |   Name  | Ver |     Type    | Cards |  Dimensions  |                            Format                            |
 |:---:|:-------:|:---:|:-----------:|:-----:|:------------:|:------------------------------------------------------------:|
 |  0  | PRIMARY |  1  |  PrimaryHDU |   4   |      ()      |                                                              |
 |  1  |  RADEC  |  1  | BinTableHDU |   69  | 1964R x 20C  | [D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D, D] |
 
-### 主头文件
+### Primary Header
 
+|Keyword | Value |         Description        |
+|:------:|:-----:|:--------------------------:|
+| SIMPLE |   T   | conforms to FITS standard  |
+| BITPIX |   8   | array data type            |
+| NAXIS  |   0   | number of array dimensions |
+| EXTEND |   T   |                            |
 
-|  字段  | 值 |            说明            |
-|:------:|:--:|:--------------------------:|
-| SIMPLE | T  | conforms to FITS standard  |
-| BITPIX | 8  | array data type            |
-| NAXIS  | 0  | number of array dimensions |
-| EXTEND | T  |                            |
+### Extension Header : Ra&Dec
 
-### 扩展单元Ra&Dec头文件
-
-|   字段   |      值     |            说明            |
+| Keyword  |     Value   |        Description         |
 |:--------:|:-----------:|:--------------------------:|
 | XTENSION | BINTABLE    | binary table extension     |
 | BITPIX   | 8           | array data type            |
@@ -94,27 +93,27 @@
 | TFORM20  |  D          |                            |
 | TUNIT20  |  rad        |                            |
 
-### 字段说明
+### Keyword Description
 
-|    字段   |       含义      |     备注     |
-|:---------:|:---------------:|:------------:|
-|     t     |    UTC-0时间    |              |
-|     Q0    |        qw       |  姿态四元数  |
-|     Q1    |        qx       |              |
-|     Q2    |        qy       |              |
-|     Q3    |        qz       |              |
-|  g_X_cel  | 探测器指向x坐标 |  天球坐标系  |
-|  g_Y_cel  | 探测器指向y坐标 |              |
-|  g_Z_cel  | 探测器指向z坐标 |              |
-|  g_Ra_cel |  探测器指向赤经 |              |
-| g_Dec_cel |  探测器指向赤纬 |              |
-|  s_X_cel  |    太阳x坐标    |              |
-|  s_Y_cel  |    太阳y坐标    |              |
-|  s_Z_cel  |    太阳z坐标    |              |
-|  s_Ra_cel |     太阳赤经    |              |
-| s_Dec_cel |     太阳赤纬    |              |
-|  s_X_det  |    太阳x坐标    | 探测器坐标系 |
-|  s_Y_det  |    太阳y坐标    |              |
-|  s_Z_det  |    太阳z坐标    |              |
-|  s_Ra_det |     太阳赤经    |              |
-| s_Dec_det |     太阳赤纬    |              |
+|  Keyword  |             Significance             |           Remarks           |
+|:---------:|:------------------------------------:|:---------------------------:|
+|     t     |            UTC-0 timestamp           |                             |
+|     Q0    |                  qw                  |     Attitude quaternion     |
+|     Q1    |                  qx                  |                             |
+|     Q2    |                  qy                  |                             |
+|     Q3    |                  qz                  |                             |
+|  g_X_cel  |   x coordinate of detector pointing  | Celestial coordinate system |
+|  g_Y_cel  |   y coordinate of detector pointing  |                             |
+|  g_Z_cel  |   z coordinate of detector pointing  |                             |
+|  g_Ra_cel | Right ascension of detector pointing |                             |
+| g_Dec_cel |   Declination of detector pointing   |                             |
+|  s_X_cel  |          x coordinate of sun         |                             |
+|  s_Y_cel  |          y coordinate of sun         |                             |
+|  s_Z_cel  |          z coordinate of sun         |                             |
+|  s_Ra_cel |   Right ascension coordinate of sun  |                             |
+| s_Dec_cel |     Declination coordinate of sun    |                             |
+|  s_X_det  |          x coordinate of sun         |  Detector coordinate system |
+|  s_Y_det  |          y coordinate of sun         |                             |
+|  s_Z_det  |          z coordinate of sun         |                             |
+|  s_Ra_det |   Right ascension coordinate of sun  |                             |
+| s_Dec_det |     Declination coordinate of sun    |                             |

@@ -1,9 +1,9 @@
 # Tte | fits4
 
-观测期间每轨一个``fits``文件，记录每一个粒子入射事件，分别为``UTC+0``时间、能量、ADC Value值  
-命名规则:``yymmddmmss_yymmddmmss.fits``，分别代表每一轨的起始时间与终止时间
+During the observation period, a `fits` file is generated for each orbit, and each particle incident event is recorded. The recorded values are `UTC+0` timestamp, energy, ADC Value  
+Naming rules : `yymmddmmss_yymmddmmss.fits`, means the orbit start and end time
 
-### 单元列表
+### HDU LIST
 
 | No. |   Name  | Ver |     Type    | Cards | Dimensions |  Format   |
 |:---:|:-------:|:---:|:-----------:|:-----:|:----------:|:---------:|
@@ -13,18 +13,18 @@
 |  3  |   T_E2  |  1  | BinTableHDU |   18  |   NR x 6C  | [D, D, J] |
 |  4  |   T_E3  |  1  | BinTableHDU |   18  |   NR x 6C  | [D, D, J] |
 
-### 主头文件
+### Primary Header
 
-|  字段  | 值 |            说明            |
-|:------:|:--:|:--------------------------:|
-| SIMPLE | T  | conforms to FITS standard  |
-| BITPIX | 8  | array data type            |
-| NAXIS  | 0  | number of array dimensions |
-| EXTEND | T  |                            |
+|Keyword | Value |         Description        |
+|:------:|:-----:|:--------------------------:|
+| SIMPLE |   T   | conforms to FITS standard  |
+| BITPIX |   8   | array data type            |
+| NAXIS  |   0   | number of array dimensions |
+| EXTEND |   T   |                            |
 
-### 扩展单元T_E头文件
+### Extension Header : T_E
 
-|   字段   |     值    |            说明            |
+| Keyword  |   Value   |        Description         |
 |:--------:|:---------:|:--------------------------:|
 | XTENSION |  BINTABLE |   binary table extension   |
 |  BITPIX  |     8     |       array data type      |
@@ -45,10 +45,10 @@
 |  TFORM3  |     J     |                            |
 |  TUNIT3  |     1     |                            |
 
-### 字段说明
+### Keyword Description
 
-|    字段   |      含义      |    说明    |
-|:---------:|:--------------:|:----------:|
-|     t     |  入射事件时间  |            |
-|     E     |  入射粒子能量  |            |
-|   adcv    |   ADC value   |            |
+| Keyword |         Significance        | Remarks |
+|:-------:|:---------------------------:|:-------:|
+|    t    |  time of particle incidence |         |
+|    E    | energy of incident particle |         |
+|   adcv  |     ADC value of energy     |         |
