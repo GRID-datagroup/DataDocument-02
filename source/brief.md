@@ -22,11 +22,7 @@
 
 ### 数据流程
 ##### 01
-<div align="center">  
-    <img src="./_static/01.png" width = "600" align=center />
-</div>
+![01 数据流程](_static/01.png)
 
 ##### 02
-<div align="center">  
-    <img src="./_static/02.png" width = "600" align=center />
-</div>
+![02 数据流程](_static/02.png)

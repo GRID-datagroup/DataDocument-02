@@ -26,7 +26,7 @@ author = 'GRID Team'
 # The short X.Y version
 version = '0.2'
 # The full version, including alpha/beta/rc tags
-release = '0.2.0'
+release = '0.2.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -112,6 +112,10 @@ htmlhelp_basename = 'GRID-Science-Datadoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 
+latex_engine = 'xelatex'
+
+latex_use_xindy = False
+
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -177,3 +181,12 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
+
+from recommonmark.transform import AutoStructify
+
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+            'auto_toc_tree_section': 'Contents',
+            'enable_eval_rst': True,
+            }, True)
+    app.add_transform(AutoStructify)

@@ -1,5 +1,5 @@
 # Telemetry | fits1
-&emsp;&emsp;观测期间每天一个`fits`文件，记录了探测器及卫星的工作状态等信息，用于清洗和筛选科学数据，是科学数据分析的基础。
+&emsp;&emsp;每个`raw.dat`对应一个`fits`文件，记录了探测器及卫星的工作状态等信息，用于清洗和筛选科学数据，是科学数据分析的基础。`raw.dat`可能混杂来自多天的数据。
 
 &emsp;&emsp;命名规则:`telYYYYMMDD_H_unpack-YYYYMMDD-UTC_Count.fits`，文件名与`raw.dat`中日期相同，所以文件内可能混杂来自很多天的数据，而文件名与中数据归属日期无关。
 
@@ -11,7 +11,7 @@
 |  1  | TEL_ORBIT |  1  | BinTableHDU |  15  |  2R x 2C  | [J, J] |
 |  2  |  TEL_MO |  1  | BinTableHDU |  108  |  NR x 33C  | [K, J, D, D, D, D, I, I, I, I, D, D, D, D, I, I, I, I, D, D, D, D, D, D, D, D, D, I, I, I, I, I, I] |
 |  3  | TEL_ORBIT_ALL |  1  | BinTableHDU |  15  |  2R x 2C  | [J, J] |
-|  3  | TEL_UTC_ALL |  1  | BinTableHDU |  12  |  NR x 1C  | [D] |
+|  4  | TEL_UTC_ALL |  1  | BinTableHDU |  12  |  NR x 1C  | [D] |
 
 ### 主头文件
 

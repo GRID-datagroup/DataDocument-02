@@ -1,5 +1,5 @@
 # Science | fits0
-&emsp;&emsp;观测期间每天一个`fits`文件，记录了探测器的科学观测数据，是`tte|fits4`的原始数据文件之一。
+&emsp;&emsp;每个`raw.dat`对应一个`fits`文件，记录了探测器的科学观测数据，是`tte|fits4`的原始数据文件之一。`raw.dat`可能混杂来自多天的数据。
 
 &emsp;&emsp;命名规则:`sciYYYYMMDD_H_unpack-YYYYMMDD-UTC_Count.fits`，文件名与`raw.dat`中日期相同，所以文件内可能混杂来自很多天的数据，而文件名与中数据归属日期无关。
 
