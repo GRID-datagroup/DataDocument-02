@@ -1,7 +1,8 @@
 # Orbit monitor | fits5
 
-观测期间每轨一个`fits`文件，每秒记录一次探测器信息，分别为`UTC+0`时间、四通道偏压(vop)、四通道label、四通道SiPM温度、四通道SiPM温度adc值、四通道vmon、vout、四通道iop、四通道imon、mcu温度、anchor  
-命名规则:`yymmddmmss_yymmddmmssorb.fits`，分别代表每一轨的起始时间与终止时间
+&emsp;&emsp;观测期间每轨一个`fits`文件，每秒记录一次探测器信息，分别为`UTC+0`时间、四通道偏压(vop)、四通道label、四通道SiPM温度、四通道SiPM温度adc值、四通道vmon、vout、四通道iop、四通道imon、mcu温度、anchor。
+
+&emsp;&emsp;命名规则:`yymmddmmss_yymmddmmssorb.fits`，分别代表每一轨的起始时间与终止时间。
 
 ### 单元列表
 
@@ -134,17 +135,17 @@
 
 ### 字段说明
 
-|    字段   |    含义   | 说明 |
-|:---------:|:---------:|:----:|
-| usc_recon |           |      |
-| utc_recon | UTC-0时间 |      |
-|    vop    |    偏压   |      |
-|   label   |           |      |
-| sipm_temp |  SiPM温度 |      |
-|  adc_temp | 温度ADC值 |      |
-|    vmon   |           |      |
-|    vout   |           |      |
-|    iop    |           |      |
-|    imon   |           |      |
-|  mcu_temp |  MCU温度  |      |
-|   anchor  |           |      |
+|    字段   |            含义            | 说明 |
+|:---------:|:--------------------------:|:----:|
+| usc_recon |    时间轴重建后的uScount   |      |
+| utc_recon |          UTC-0时间         |      |
+|    vop    |            偏压            |      |
+|   label   |    时间轴清洗的结果标签    |      |
+| sipm_temp |          SiPM温度          |      |
+|  adc_temp |          温度ADC值         |      |
+|    vmon   |         电压检测值         |      |
+|    vout   |                            |      |
+|    iop    |                            |      |
+|    imon   |         电流检测值         |      |
+|  mcu_temp |           MCU温度          |      |
+|   anchor  | 进行时间轴差值的数据点标记 |      |
