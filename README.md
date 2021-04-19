@@ -1,27 +1,36 @@
 # 天格计划说明文档
 
 ## 介绍
-本项目是为了帮助使用天格计划相关产品而编写，正在不断完善中；如果在使用过程中遇到任何问题或者有建议，请联系GRID Team
+&emsp;&emsp;本项目是为了帮助使用天格计划相关产品而编写，正在不断完善中；如果在使用过程中遇到任何问题或者有建议，请联系GRID Team。
+
+## 分支
+&emsp;&emsp;本仓库中所有分支的命名为`GRID-id-lang`，表示不同卫星对应的不同语言的文档。
+
+### 版本号
+&emsp;&emsp;本文档版本号命名规则为`X.Y.Z`：
+* X：主版本号，代表卫星编号，以最小编号为准，例如GRID-02、GRID-04文档版本号均为`2.X.X`
+* Y：次版本号，新增或弃用了内容
+* Z：修订号，对内容进行了修正
 
 ## 环境
-本项目使用Sphinx生成，支持markdown文件，使用ReadtheDocs进行托管  
+&emsp;&emsp;本项目使用Sphinx生成，使用ReadtheDocs进行托管。
 
-#### 开发环境
+### 开发环境
 ```
 Python 3.9.1rc1
 Sphinx 
 ```
 
-#### 依赖包
+### 依赖包
 ```
 sphinx
 sphinx-autobuild
 sphinx_rtd_theme
-recommonmark
-sphinx-markdown-tables
 ```
 
-#### 配置
+### 配置
+
+#### 支持markdown编写
 * `conf.py` :
 ```python
 extensions = ['sphinx_markdown_tables', 'recommonmark']
@@ -32,7 +41,13 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 ```
 
-以下操作将支持本地中文搜索：
+* `requirements.txt`:
+```
+recommonmark
+sphinx-markdown-tables
+```
+
+#### 本地中文搜索：
 * `jieba package` :
 ```python
 pip3 install jieba
@@ -47,12 +62,9 @@ languages = {
 }
 ```
 
-#### 本地试运行
+### 本地试运行
 * `Server` : 使用`en/zh_server.py`，采用`Flask`库
 * `Makefile` : 自定义`make html`命令
-
-## 目录
-1. 科学数据产品文档
 
 ## 参考资料
 * [使用ReadtheDocs托管文档](https://www.xncoding.com/2017/01/22/fullstack/readthedoc.html)

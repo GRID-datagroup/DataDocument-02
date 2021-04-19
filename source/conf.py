@@ -24,9 +24,9 @@ copyright = '2020-2021, GRID Team'
 author = 'GRID Team'
 
 # The short X.Y version
-version = '0.2'
+version = '2.1'
 # The full version, including alpha/beta/rc tags
-release = '0.2.1'
+release = '2.1.0'
 
 
 # -- General configuration ---------------------------------------------------
