@@ -1,7 +1,4 @@
-.. GRID-Science-Data documentation master file, created by
-   sphinx-quickstart on Mon Dec  7 00:45:21 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+:github_url: https://github.com/GRID-datagroup/GRID-Document
 
 天格科学数据使用文档
 =============================================
@@ -9,7 +6,7 @@
 概览
 --------
 
-  本文档是为了帮助使用天格科学数据产品而编写，正在不断完善中；如果在使用过程中遇到任何问题或者有建议，请联系GRID Team。
+  本文档是为了帮助使用天格科学数据产品而编写，如果在使用过程中遇到任何问题或者有建议，请联系GRID Team。
 
 版本号说明
 -----------
@@ -22,8 +19,8 @@
 
 * Z：修订号，对内容进行了修正
 
-使用文档
------------------
+文档
+---------
 
 .. toctree::
    :maxdepth: 3
@@ -32,9 +29,11 @@
    norm
    source/index
    science/index
+   appendix/index
 
 更新日志
 ---------
+* 2.2.0 增加raw.dat和标定文件说明;修改姿态与轨道文件描述
 * 2.1.1 修正conf.py错误
 * 2.1.0 增加了原始数据说明
 * 2.0.1 修正fits0/1错误

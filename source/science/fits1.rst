@@ -77,7 +77,7 @@ Telemetry \| fits1
 扩展单元TEL_MO头文件
 ~~~~~~~~~~~~~~~~~~~~~
 
-  同\ `fits5 </detail/fits5.html>`__
+  同\ `fits5 </science/fits5.html>`__
 
 扩展单元TEL_ORBIT_ALL头文件
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
