@@ -21,15 +21,7 @@ Category
    norm
    detail/index
 
-Task list
--------------
-* 优化数据格式
-* 中文无法搜索。已解决，参见Github的 `README.md`_
-* markdown产生Toc tree。已解决，markdown无法多文件引用
-* sun(fits2)的大小问题
-
 Update log
 -------------
-* 0.1.0 编写说明文档
-
-.. _README.md: https://github.com/GRID-datagroup/GRID-document/blob/master/README.md
+* 0.2.0 Update data to GRID-02
+* 0.1.0 initialization
